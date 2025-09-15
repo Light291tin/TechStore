@@ -35,14 +35,21 @@ header {
     align-items: center;
 }
 
-.titre{
+h1{
      position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     text-align: center; /* optionnel, pour centrer le texte */
+font-family: 'AIRBORNEGP', Arial, sans-serif; /* Ajoute cette ligne */
 
+}
 
+@font-face {
+    font-family: 'AIRBORNEGP';
+    src: url('fonts/AIRBORNEGP.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
