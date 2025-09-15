@@ -12,9 +12,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: #f8f8f8;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    color: #222;
+    min-height: 100vh;
 }
 
 header {
@@ -116,8 +117,9 @@ section .wave span:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
-    margin-top: 24px;
+    gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .produit {
@@ -134,4 +136,77 @@ section .wave span:nth-child(3) {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     margin-bottom: 8px;
+}
+
+.card {
+    background: #fff;
+    color: #222;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    padding: 18px 16px 28px 16px;
+    transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
+    position: relative;
+    min-height: 260px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid #e5e7eb;
+}
+
+.card:hover {
+    transform: translateY(-14px) scale(1.06);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    border-color: #a5b4fc;
+    background: #f1f5ff;
+    z-index: 2;
+}
+
+.card img {
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    background: #f3f4f6;
+}
+
+.card p {
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #222;
+    text-align: center;
+    font-size: 1.08em;
+    letter-spacing: 0.5px;
+}
+
+.card .description {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.35s, max-height 0.35s;
+    font-size: 0.98em;
+    color: #444;
+    margin-top: 10px;
+    text-align: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 10px 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+
+.card:hover .description {
+    opacity: 1;
+    max-height: 200px;
+}
+
+@media (max-width: 900px) {
+    .liste-produits {
+        gap: 18px;
+    }
+    .card {
+        width: 95vw;
+        max-width: 320px;
+    }
 }
