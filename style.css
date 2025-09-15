@@ -12,6 +12,7 @@
 }
 
 body {
+   
     font-family: "Poppins", Arial, sans-serif;
     background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
     color: #222;
@@ -27,14 +28,23 @@ header {
     align-items: center;
 }
 
-.titre{
+h1{
      position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     text-align: center; /* optionnel, pour centrer le texte */
+ font-family: 'airborne-gp', Arial, sans-serif;
+
+}
 
 
+
+@font-face {
+    font-family: 'airborne-gp';
+    src: url('fonts/NomDeTaPolice.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
